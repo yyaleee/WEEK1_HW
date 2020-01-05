@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- JS -->		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- 구글 웹폰트 가져오기 -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+	<!-- 스타일 CSS / 많아지면 별도 파일로 옮기자 -->
+	<style type="text/css">
+		.font-header {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.selected-tab {
+			color: #6E5C97;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+
+		}
+
+		.selected-tab:hover {
+			color: #6E5C97;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+
+		}
+
+		.notselected-tab {
+			color: lightgray;
+			text-decoration: none;
+			font-size: 20px;
+		}
+
+		.notselected-tab:hover {
+			color: #6E5C97;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		.main-banner {
+			width: 700px;
+			height: 250px;
+			/*background-image: url('https://i.pinimg.com/474x/1e/d0/5c/1ed05cc3ebd7060dc2e7a0198b20cbe1.jpg');*/
+			background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://static.vecteezy.com/system/resources/previews/000/562/290/large_2x/waterfalls-golden-glitter-sparkle-bubbles-champagne-particles-stars-black-background-happy-new-year-holiday-concept-vector.jpg');
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.login-box {
+			margin-left: 20px;
+			padding: 10px 10px 10px 10px;
+			width: 400px;
+		}
+
+		.login-button {
+			background-color: #6E5C97;
+		}
+
+		.member-button {
+			text-decoration: underline;
+			color: #bababa;
+		}
+
+		.member-button:hover {
+			text-decoration: underline;
+			color: #6E5C97;
+		}
+
+		.main-label {
+			text-align: center;
+			font-size: 20px;
+			padding-bottom: 40px;
+		}
+
+		.product-name {
+			color: #7965a6;
+			font-weight: bold;
+			font-size: 17px;
+		}
+
+		.product-name:hover {
+			text-decoration: underline;
+			color: #7965a6;
+			font-weight: bold;
+		}
+
+		.product-price {
+			font-weight: bold;
+			font-size: 17px;
+		}
+
+
+		.mall-footer {
+			background-color: #e6e6e6;
+			padding-top : 50px;
+			padding-bottom: 50px;
+		}
+
+		.footer-info {
+			color: gray;
+			font-size: 11px;
+		}
+
+		.backtotop-button {
+			color: #6E5C97;
+		}
+
+		
+		
+
+	</style>
+
+
+	<title>SNOOPY MALL</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<header class="blog-header my-4 py-3">
+			<div class="row flex-nowrap justify-content-between align-items-center">
+				<div class="col-4 pt-1">
+					<a class="text-muted" href="#">+즐겨찾기</a>
+				</div>
+				<div class="col-4 text-center">
+					<a class="blog-header-logo text-dark font-header" href="#">SNOOPY MALL</a>
+				</div>
+				<div class="col-4 d-flex justify-content-end align-items-center">
+					<a class="text-muted" href="#" aria-label="Search">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false">
+							<title>Search</title>
+							<!-- 돋보기 모양 그리는 부분 -->
+							<circle cx="10.5" cy="10.5" r="7.5"></circle>
+							<path d="M21 21l-5.2-5.2"></path>
+						</svg>
+					</a>
+					<a class="btn btn-sm btn-outline-secondary" href="#">로그인</a>
+				</div>
+			</div>
+		</header>
+		<hr class="my-1">
+		<div class="nav-scroller py-1 mb-1">
+			<nav class="nav d-flex justify-content-between">
+				<a class="selected-tab p-2" href="#">HOME</a>
+				<a class="notselected-tab p-2 text-muted" href="#">CATEGORY</a>
+				<a class="notselected-tab p-2 text-muted" href="#">BEST</a>
+				<a class="notselected-tab p-2 text-muted" href="#">NEW</a>
+				<a class="notselected-tab p-2 text-muted" href="#">EVENT</a>
+				<a class="notselected-tab p-2 text-muted" href="#">MY PAGE</a>
+			</nav>
+		</div>
+		<hr class="my-1">
+		<!-- <div class="row flex-nowrap justify-content-between align-items-center mt-4 p-2 "> -->
+			<div class="d-flex mt-4 justify-content-between">
+				<button type="submit" class="main-banner btn text-white px-0 py02 rounded">
+					<div class="col-md-12 px-0 py-2">
+						<div>2020년 새해 맞이 특가상품</div>
+					</div>
+				</button>
+				<div class="login-box pt-4">
+					<form class="text-muted">
+						<div class="form-group row">
+							<label for="inputId" class="col-sm-3 col-form-label">아이디</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inputId">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputPassword" class="col-sm-3 col-form-label">비밀번호</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="inputPassword">
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center pl-1 my-4">
+							<div class="form-check mb-0 align-middle">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label ml-1" for="exampleCheck1">아이디 저장하기</label>
+							</div>
+							<button type="submit" class="login-button btn text-white px-4">로그인</button>
+						</div>
+					</form>
+					<div class="d-flex justify-content-between align-items-center px-2 my-4">
+						<a class="member-button" href="#">회원가입</a>
+						<a class="member-button" href="#">아이디 찾기</a>
+						<a class="member-button" href="#">비밀번호 찾기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<main role="main">
+			<div class="album py-1">
+				<div class="container">
+					<hr class="mt-1 mb-3">
+					<div class="main-label">NEW ARRIVAL</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="card-img-top" src="https://usercontents-c.styleshare.io/images/14933251/640x640">
+								<div class="card-body">
+									<a class="card-title product-name" href="#">찰리브라운 스누피 인형</a>
+									<p class="card-text mt-3">
+										침대 위에 올려놓기 좋은 스누피 & 찰리브라운 인형! 선물용으로 좋아요 ♥︎
+									</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											30,000원
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+											<button type="button" class="btn btn-sm btn-outline-secondary">ADD CART</button>
+
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="mall-footer border-top d-flex flex-column justify-content-between align-items-center">
+				<div class="mb-3 font-weight-bold">SNOOPY MALL</div>
+				<p class="footer-info">(04637) 서울특별시 중구 한강대로 416 (남대문로5가, 서울스퀘어)<br>통신판매업신고 : 2020-서울중구-1234<br>대표이사 : 정예일 사업자등록번호 : 123-45-67890</p>
+				<div>
+					<a class="backtotop-button" href="#">↑ Back to top</a>
+				</div>
+			
+		</footer>
+
+
+	</body>
+	</html>
